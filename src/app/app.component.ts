@@ -1,9 +1,9 @@
-import { Component } from "@angular/core";
+import { Component, Inject, LOCALE_ID } from "@angular/core";
 
 @Component({
   selector: "app-root",
   template: `
-   <span>Locale id: {{locale}}</span>
+   <span i18n>Locale id: {{locale}}</span>
   `,
   styles: []
 })

@@ -83,6 +83,16 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "en": {
+              "localize": [
+                "en"
+              ]
+            },
+            "fr": {
+              "localize": [
+                "fr"
+              ]
             }
           }
         },
@@ -92,18 +102,31 @@
             "browserTarget": "serve-wrong-locale-id:build"
           },
           "configurations": {
-            "production": {
-              "browserTarget": "serve-wrong-locale-id:build:production"
+            "en": {
+              "browserTarget": "serve-wrong-locale-id:build:en"
+            },
+            "fr": {
+              "browserTarget": "serve-wrong-locale-id:build:fr"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "serve-wrong-locale-id:build"
+            "browserTarget": "serve-wrong-locale-id:build",
+            "format": "xlf",
+            "i18nLocale": "fr",
+            "outputPath": "locales"
           }
         }
+      },
+      "i18n": {
+        "locales": {
+          "en": "locales/messages.en.xlf"
+        },
+        "sourceLocale": "fr"
       }
-    }},
+    }
+  },
   "defaultProject": "serve-wrong-locale-id"
 }
